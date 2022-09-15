@@ -4,17 +4,13 @@
 	<head>
 		<meta charset="utf8" />
 		<title> claviardage </title>
-		<link href="chat_style.css" rel="stylesheet">
+		<link href= "<?= PATH_CSS ?>chat_style.css" rel="stylesheet">
 	</head>
 	<body>
 		<?php
 		
-		// connexion à la base de donnée
-		require "connexion.php";
 		//importation du menu 
-		include "menu.php";
-		//importation des droits
-		include "droits.php";
+		require_once(PATH_MENU);
 		//tester et réagir si on a poster un message
 		if ($droits>0 and isset($_POST['message'])){
 			
@@ -49,7 +45,7 @@
         }
         //formulaire pour poster un message
 		?>
-		<form action="chat.php" method="post">
+		<form action="index.php?page=chat" method="post">
 			<input type="text" name="message" />
 			<input type="submit" value="Envoyer"/>
 		</form>
@@ -66,7 +62,7 @@
 			//verifier que cest un admin ou propriétaire du message 
 			if ($droits==2 or $ligne['id_user']==$_SESSION['mail']) { ?> 
 				<td>
-					<form action="chat.php" method="post">
+					<form action="index.php?page=chat" method="post">
 						<input type="hidden" name="id_message" value=<?php echo $ligne['id'];?> >
 						<input type="submit" value="delete">
 					</form>
