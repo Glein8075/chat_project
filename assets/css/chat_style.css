@@ -1,0 +1,47 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+ background-image:
+  url("https://static.lpnt.fr/images/2017/10/27/10978762lpw-10979123-article-jpg_4669854_980x426.jpg");
+}
+
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+p{
+	font-size: 20px;
+}
+
+.connexion{
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0 20px 700px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+  color: #00539F;
+  text-shadow: 2px 2px 1px black;
+}
+
+img {
+  height : 150px;
+  width : 150px;
+  display: block;
+  margin: 0 auto;
+}
+
