@@ -1,10 +1,4 @@
- <!DOCTYPE html>
- <html>
-    <head>
-        <title>Inscription</title>
-        <meta charset="utf-8" />
-        <link href="<?= PATH_CSS?>chat_style.css" rel="stylesheet">
-    </head>
+<?php require_once(PATH_VIEWS.'header.php');?>
     <body>
 		<!-- debut de la page -->
 		<?php

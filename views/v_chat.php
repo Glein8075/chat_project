@@ -1,11 +1,4 @@
-<!doctype html>
-<?php session_start(); ?>
-<html lang="fr">
-	<head>
-		<meta charset="utf8" />
-		<title> claviardage </title>
-		<link href= "<?= PATH_CSS ?>chat_style.css" rel="stylesheet">
-	</head>
+	<?php require_once(PATH_VIEWS.'header.php');?>
 	<body>
 		<?php
 		

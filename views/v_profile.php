@@ -1,37 +1,9 @@
-<!DOCTYPE html>
-<?php session_start();?>
-<html>
-    <head>
-        <title>membres</title>
-        <meta charset="utf-8" />
-        <link href= "<?= PATH_CSS ?>chat_style.css" rel="stylesheet">
-    </head>
+<?php require_once(PATH_VIEWS.'header.php');?>
     <body>
 	<?php 	
-		//debut de la page -->
-		//vérification de session création de la variable $_SESSION["mail"]-->
+		//reste de la page
+		//consulter la base de données pour réccupérer toute les informations des users
 		if (isset($_SESSION["mail"])){
-			//importation du menu 
-			require_once(PATH_MENU);
-			//gestion d'une action de formulaire
-			if (isset($_POST['Pseudo'])){
-				$reponse=$bdd->prepare('UPDATE my_users SET pseudo=:Pseudo WHERE email=:email');
-				$reponse->execute(array(
-					"Pseudo" => htmlspecialchars($_POST['Pseudo']),
-					"email" => $_SESSION['mail']));
-			}
-			if (isset($_POST['URL'])){
-				echo 'il y a un post url';
-				$reponse=$bdd->prepare('UPDATE my_users SET url=:url WHERE email=:email');
-				$reponse->execute(array(
-					"url" => htmlspecialchars($_POST['URL']),
-					"email" => $_SESSION['mail']));
-			}					
-			?>
-			<!-- reste de la page-->
-			
-				<?php
-				//consulter la base de données pour réccupérer toute les informations des users
 				$reponse=$bdd->query('SELECT * FROM my_users WHERE email= "'.$_SESSION["mail"].'"');
 				if ($ligne= $reponse->fetch()){
 					echo '<table>';
