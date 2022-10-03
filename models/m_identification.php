@@ -1,7 +1,7 @@
 <?php
-		//reccupérer l'identifiant et la mdp du formulaire
+		//récupérer l'identifiant et la mdp du formulaire
         
-		if( isset( $_POST["mail"])){
+		if(isset( $_POST["mail"])){
 			// interrogation de la base de données
 			$req=$bdd->prepare('select email, mdp, pseudo from my_users where email=:user_mail;');
 			$req->execute(array(
@@ -12,8 +12,9 @@
 				//remplir les variables de session 
 				$_SESSION['mail']=$ligne['email'];
 				$_SESSION['user']=$ligne['pseudo'];
-				$req->closeCursor();
-				
+			}
+			else{
+				$inconnu=true;
 			}
 			$req->closeCursor();
 		}

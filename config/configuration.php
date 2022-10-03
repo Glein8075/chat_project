@@ -13,9 +13,9 @@ const DEBUG = true; // production : false; dev : true
 
 // Accès base de données
 const BD_HOST = 'localhost';
-const BD_DBNAME = 'tp';
+const BD_DBNAME = 'chat';
 const BD_USER = 'root';
-const BD_PWD = '$va38SE26$';
+const BD_PWD = '$Toto38$';
 
 // Langue du site
 const LANG ='FR-fr';

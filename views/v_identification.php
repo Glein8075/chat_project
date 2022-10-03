@@ -2,7 +2,7 @@
     <body>
 		<!-- formulaire d'identification -->
 	<div class="connexion">
-		<form action="index.php?page=identification" method="POST" id="element">
+		<form action="index.php?page=chat" method="POST" id="element">
 				<fieldset>
 
 					<p><input type="email" name="mail" placeholder="Adresse E-mail" /></p>
@@ -13,7 +13,7 @@
 					<input type="reset" class="btn" value="Rétablir" />
 				</fieldset>
 			</form>
-		<p>si vous n'avez pas de compte, </p><a href="index.php?page=inscription">inscrivez-vous !</a>
+		<p>si vous n'avez pas de compte, </p><a href="index.php?page=inscription">inscrivez-vous ici !</a>
 		
 	</div>
     </body>

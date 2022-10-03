@@ -8,5 +8,9 @@ if (isset($_SESSION["mail"])){
             "droits" => htmlspecialchars($_POST['droit']),
             "email" => $_POST['user']));
     }
+    if(isset($_SESSION['mail'])){
+        //consulter la base de données pour récupérer toute les informations des users
+        $reponse=$bdd->query('SELECT * FROM my_users');
     }
+}
 ?>

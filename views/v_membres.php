@@ -7,9 +7,7 @@
 				<table><tr><td>pseudo</td><td>droits</td><td></td</tr>
 				<?php
 				
-				if(isset($_SESSION['mail'])){
-				//consulter la base de données pour récupérer toute les informations des users
-				$reponse=$bdd->query('SELECT * FROM my_users');
+				
 				while ($ligne = $reponse->fetch()){
 					//affichage pour chaque user
 					//version php
@@ -33,11 +31,6 @@
 				?>
 				</table>
 			</div>
-        <?php } //fin du if isset session mail
-		// else {
-		// 	//redirection vers index.php
-		// 	header('Location: index.php?page=interdiction');
-		// 	exit();
-		// }?>
+        
     </body>
 </html>
